@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  pvpgn:
+    build: .
+    container_name: pvpgn
+    network_mode: host
+    volumes:
+      - ./etc:/etc/pvpgn
+      - ./var:/var/pvpgn
+    restart: unless-stopped
